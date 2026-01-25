@@ -1,0 +1,43 @@
+.case-studies {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.case-studies-container {
+  display: flex;
+  gap: 4rem;
+  padding: 2rem 5vw;
+  min-width: min-content;
+  flex: 1;
+  align-items: center;
+  background-color: #ffffff;
+  margin-top: auto;
+}
+
+/* Hide scrollbar but keep functionality */
+.case-studies::-webkit-scrollbar {
+  display: none;
+}
+
+.case-studies {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .case-studies-container {
+    gap: 2rem;
+    padding: 0 3vw;
+  }
+}
+
