@@ -1,10 +1,18 @@
 import Header from './Header';
 import './CaseStudy.css';
+import { ArrowLeft } from 'lucide-react';
 
-function CaseStudy({ title, description, thumbnail, slides = [], onBack }) {
+const BackButton = ({ onClick }) => (
+  <button className="back-button" onClick={onClick}>
+    <ArrowLeft />
+    See all projects
+  </button>
+);
+
+function CaseStudy({ title, description, overview, thumbnail, content, slides = [] }) {
   return (
     <div className="case-study">
-      <Header onBack={onBack} />
+      <Header />
       <div className="case-study-content">
         <div className="case-study-header">
           <div className="case-study-thumbnail">
@@ -14,14 +22,24 @@ function CaseStudy({ title, description, thumbnail, slides = [], onBack }) {
               <div className="thumbnail-placeholder">{title}</div>
             )}
           </div>
-          <div className="case-study-overview">
-            <h1 className="case-study-title">{title}</h1>
-            <p className="case-study-description">{description}</p>
+          <div className="right-panel">
+            <div className="case-study-overview">
+              <h1 className="case-study-title">{title}</h1>
+              <p className="case-study-description">{description}</p>
+            </div>
+            <div className='case-study-overview'>
+              <h2>
+                Overview
+              </h2>
+              <p className='case-study-description'>
+                {overview}
+              </p>
+            </div>
           </div>
         </div>
         
         <div className="case-study-divider"></div>
-        
+        {content && content}
         <div className="case-study-slides">
           <div className="slides-container">
             {slides.map((slide, index) => (
@@ -31,6 +49,7 @@ function CaseStudy({ title, description, thumbnail, slides = [], onBack }) {
             ))}
           </div>
         </div>
+        <BackButton onClick={() => window.history.back()} />
       </div>
     </div>
   );

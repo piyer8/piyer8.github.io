@@ -15,8 +15,8 @@
 .home::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
+  top: -25%;
+  right: 10%;
   width: 80%;
   height: 150%;
   background: radial-gradient(ellipse at center, #a8e063 0%, rgba(168, 224, 99, 0.6) 40%, rgba(168, 224, 99, 0) 70%);
@@ -24,9 +24,8 @@
 }
 
 .home-content {
-  padding: 0 5vw;
+  padding: 0 5%;
   width: 100%;
-  max-width: 1200px;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -36,11 +35,11 @@
 }
 
 .home-text {
-  margin-bottom: 2rem;
+  margin-bottom: 20rem;
 }
 
 .greeting {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #000;
   margin: 0 0 0.5rem 0;
@@ -53,19 +52,17 @@
   color: #000;
   margin: 0;
   line-height: 1.1;
-  font-family: 'Futura Condensed', 'Futura-Condensed', 'Futura PT Condensed', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
+  font-family: 'Futura', 'Futura', 'Futura PT Condensed', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
   letter-spacing: -0.02em;
 }
 
 .home-description {
-  position: absolute;
-  bottom: 5vh;
-  right: 5vw;
   text-align: right;
+  max-width: 600px;
 }
 
 .home-description p {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #000;
   margin: 0;
@@ -77,11 +74,19 @@
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
   color: #000;
   animation: bounce 2s infinite;
+}
+
+.bottom-right-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  justify-content: flex-end;
+  bottom: 10%;
+  right: 5%;
+  gap: 32px;
 }
 
 @keyframes bounce {

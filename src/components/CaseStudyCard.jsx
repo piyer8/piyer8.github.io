@@ -1,8 +1,8 @@
 import './CaseStudyCard.css';
 
-function CaseStudyCard({ title, description, image, onClick }) {
+function CaseStudyCard({ title, description, image }) {
   return (
-    <div className="case-study-card" onClick={onClick}>
+    <div className="case-study-card">
       <div className="case-study-image">
         {image ? (
           <img src={image} alt={title} />
@@ -13,7 +13,7 @@ function CaseStudyCard({ title, description, image, onClick }) {
         )}
       </div>
       <div className="case-study-info">
-        <h2 className="case-study-title">{title}</h2>
+        <h3 className="case-study-title">{title}</h3>
         <p className="case-study-description">{description}</p>
       </div>
     </div>
