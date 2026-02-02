@@ -39,20 +39,22 @@
 }
 
 .greeting {
+  font-family: "futura-pt", sans-serif;
   font-size: 2rem;
   font-weight: 400;
+  font-style: normal;
   color: #000;
   margin: 0 0 0.5rem 0;
-  font-family: 'Futura', 'Futura PT', 'Futura-Medium', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
 }
 
 .name {
+  font-family: "futura-pt", sans-serif;
   font-size: clamp(3rem, 8vw, 8rem);
   font-weight: 700;
+  font-style: bolder;
   color: #000;
   margin: 0;
   line-height: 1.1;
-  font-family: 'Futura', 'Futura', 'Futura PT Condensed', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -62,15 +64,18 @@
 }
 
 .home-description p {
+  font-family: "futura-pt", sans-serif;
   font-size: 2rem;
   font-weight: 400;
+  font-style: normal;
   color: #000;
   margin: 0;
-  font-family: 'Futura', 'Futura PT', 'Futura-Medium', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
 }
 
 .home-description strong {
+  font-family: "futura-pt-bold", sans-serif;
   font-weight: 700;
+  font-style: normal;
 }
 
 .scroll-indicator {

@@ -14,9 +14,9 @@ function CaseStudies() {
     },
     {
       id: 2,
-      title: 'myTiro',
+      title: 'HapViz',
       description: 'Tracking device usage to better manage your time',
-      image: '/placeholder-mytiro.jpg',
+      image: '/HapViz/Header.png',
       path: null
     }
   ];

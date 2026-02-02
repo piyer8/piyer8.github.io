@@ -22,9 +22,9 @@
 }
 
 .case-studies-title {
-  font-family: 'Futura Condensed', 'Futura-Condensed', 'Futura PT Condensed', 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
+  font-family: "futura-pt", sans-serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-style: bolder;
   color: #000000;
   margin: 2rem 0 2rem 5vw;
   padding: 0;
