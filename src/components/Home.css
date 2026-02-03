@@ -1,0 +1,127 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  padding: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  right: 10%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(ellipse at center, #a8e063 0%, rgba(168, 224, 99, 0.6) 40%, rgba(168, 224, 99, 0) 70%);
+  z-index: 0;
+}
+
+.home-content {
+  padding: 0 5%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-text {
+  margin-bottom: 20rem;
+}
+
+.greeting {
+  font-family: "futura-pt", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+}
+
+.name {
+  font-family: "futura-pt", sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 700;
+  font-style: bolder;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.home-description {
+  text-align: right;
+  max-width: 600px;
+}
+
+.home-description p {
+  font-family: "futura-pt", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  margin: 0;
+}
+
+.home-description strong {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.scroll-indicator {
+  color: #000;
+  animation: bounce 2s infinite;
+}
+
+.bottom-right-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  justify-content: flex-end;
+  bottom: 10%;
+  right: 5%;
+  gap: 32px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 0 3vw;
+  }
+  
+  .home-description {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
