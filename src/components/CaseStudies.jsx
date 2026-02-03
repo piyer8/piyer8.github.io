@@ -17,7 +17,7 @@ function CaseStudies() {
       title: 'HapViz',
       description: 'Tracking device usage to better manage your time',
       image: '/HapViz/Header.png',
-      path: null
+      path: '/case-study/hapviz'
     }
   ];
 

@@ -70,6 +70,27 @@
   margin: 0;
 }
 
+.case-study-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h3{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+}
+
 @media (max-width: 768px) {
   .case-study-card {
     width: 90vw;
