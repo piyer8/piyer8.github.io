@@ -11,7 +11,7 @@
 }
 
 .case-study-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-1px);
   opacity: 0.9;
 }
 
@@ -81,9 +81,14 @@
   flex-direction: column;
   gap: 0.5rem;
 
-  h3{
+  h3 {
+    font-family: "futura-pt", sans-serif !important;
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  h4 {
+    font-family: "futura-pt", sans-serif !important;
   }
 
   ul{

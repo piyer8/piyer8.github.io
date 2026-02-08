@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import Header from './Header';
 import './CaseStudy.css';
 import { ArrowLeft } from 'lucide-react';
@@ -10,6 +11,25 @@ const BackButton = ({ onClick }) => (
 );
 
 function CaseStudy({ title, description, overview, thumbnail, content, slides = [] }) {
+  const slidesContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (!slidesContainerRef.current) return;
+
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        slidesContainerRef.current.scrollBy({
+          left: -e.deltaY * 10,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, []);
+
   return (
     <div className="case-study">
       <Header />
@@ -40,7 +60,7 @@ function CaseStudy({ title, description, overview, thumbnail, content, slides = 
         
         <div className="case-study-divider"></div>
         {content && content}
-        <div className="case-study-slides">
+        <div className="case-study-slides" ref={slidesContainerRef}>
           <div className="slides-container">
             {slides.map((slide, index) => (
               <div key={index} className="slide">
