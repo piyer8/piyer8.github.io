@@ -1,31 +1,13 @@
 .app {
   width: 100vw;
-  height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  overscroll-behavior: none;
-}
-
-.app-container {
-  display: flex;
-  width: 200vw;
-  height: 100vh;
-  flex-shrink: 0;
+  min-height: 100vh;
+  background-color: #EDEDED;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .case-study-app {
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-/* Hide scrollbar but keep functionality */
-.app::-webkit-scrollbar {
-  display: none;
-}
-
-.app {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  background-color: #EDEDED;
 }

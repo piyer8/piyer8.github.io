@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import CaseStudies from './components/CaseStudies';
@@ -8,31 +7,10 @@ import FittrackCaseStudy from './components/FittrackCaseStudy';
 import './App.css';
 
 function AppContent() {
-  const appRef = useRef(null);
-
-  useEffect(() => {
-    const handleWheel = (e) => {
-      if (!appRef.current) return;
-
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        appRef.current.scrollBy({
-          left: -e.deltaY * 10,
-          behavior: 'smooth'
-        });
-      }
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleWheel);
-  }, []);
-
   return (
-    <div className="app" ref={appRef}>
-      <div className="app-container">
-        <Home />
-        <CaseStudies />
-      </div>
+    <div className="app">
+      <Home />
+      <CaseStudies />
     </div>
   );
 }

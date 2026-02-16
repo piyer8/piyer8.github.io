@@ -13,7 +13,7 @@ function CaseStudyCard({ title, description, image }) {
         )}
       </div>
       <div className="case-study-info">
-        <h3 className="case-study-title">{title}</h3>
+        <p className="case-study-title">{title}</p>
         <p className="case-study-description">{description}</p>
       </div>
     </div>
