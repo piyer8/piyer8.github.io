@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #EDEDED;
   padding: 4rem 5vw;
+  padding-bottom: 2rem;
 }
 
 .home-content {
@@ -31,7 +32,7 @@
   font-style: normal;
   color: #454545;
   margin: 0;
-  line-height: 1.1;
+  line-height: 0.9;
 }
 
 .home-description {
@@ -43,10 +44,29 @@
   margin: 1rem 0 0 0;
 }
 
+.home-header{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .home-description strong {
   font-family: "futura-pt-bold", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.blurb{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  max-width: fit-content;
+  background-color: orange;
+  color: #FFF;
+  font-family: "futura-pt-bold", sans-serif;
 }
 
 @media (max-width: 768px) {

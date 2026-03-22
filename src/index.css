@@ -32,4 +32,14 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: #EDEDED;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

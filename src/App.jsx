@@ -5,10 +5,12 @@ import MayoClinicCaseStudy from './components/MayoClinicCaseStudy';
 import HapVizCaseStudy from './components/HapVizCaseStudy';
 import FittrackCaseStudy from './components/FittrackCaseStudy';
 import './App.css';
+import Header from './components/Header';
 
 function AppContent() {
   return (
     <div className="app">
+      <Header />
       <Home />
       <CaseStudies />
     </div>
