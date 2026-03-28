@@ -1,0 +1,58 @@
+.scroll-story {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4rem;
+}
+
+.story-nav {
+  min-height: 50vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+  border-top: 1px solid rgba(28, 25, 23, 0.15);
+  gap: 1.5rem;
+  background-color: var(--stone);
+}
+
+.story-next {
+  font-family: "futura-pt", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 300ms var(--ease);
+}
+
+.story-next:hover {
+  color: var(--red);
+}
+
+.story-back {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dust);
+  text-decoration: none;
+  transition: color 300ms var(--ease);
+}
+
+.story-back:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .scroll-story {
+    height: auto;
+    overflow-y: auto;
+    scroll-snap-type: none;
+  }
+
+  .story-nav {
+    min-height: unset;
+    padding: 4rem 5vw;
+  }
+}

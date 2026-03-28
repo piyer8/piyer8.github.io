@@ -1,85 +1,54 @@
-.home {
+.hero {
+  position: relative;
   width: 100%;
-  background-color: #EDEDED;
-  padding: 4rem 5vw;
-  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  padding: var(--section-pad-v) 5vw;
+  background-color: var(--stone);
 }
 
-.home-content {
+.hero-inner {
   width: 100%;
-  margin: 0 auto;
 }
 
-.home-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.hero-eyebrow {
+  display: block;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-bottom: 1.5rem;
 }
 
-.greeting {
+.hero-name {
   font-family: "futura-pt", sans-serif;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 6vw, 7rem);
   font-weight: 400;
-  font-style: normal;
-  color: #454545;
-  margin: 0;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 2rem;
 }
 
-.name {
-  font-family: "futura-pt", sans-serif;
-  font-size: 8rem;
-  font-weight: 700;
-  font-style: normal;
-  color: #454545;
-  margin: 0;
-  line-height: 0.9;
+.hero-dot {
+  color: var(--red);
 }
 
-.home-description {
-  font-family: "futura-pt", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #454545;
-  margin: 1rem 0 0 0;
+.hero-sub {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.8125rem;
+  color: var(--dust);
+  letter-spacing: 0.02em;
 }
 
-.home-header{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 5vw;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust);
 }
-
-.home-description strong {
-  font-family: "futura-pt-bold", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.blurb{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  max-width: fit-content;
-  background-color: orange;
-  color: #FFF;
-  font-family: "futura-pt-bold", sans-serif;
-}
-
-@media (max-width: 768px) {
-  .home {
-    padding: 2rem 3vw;
-  }
-  
-  .greeting {
-    font-size: 1.25rem;
-  }
-  
-  .home-description {
-    font-size: 1.25rem;
-  }
-}
-

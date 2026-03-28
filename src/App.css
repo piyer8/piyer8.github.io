@@ -1,7 +1,7 @@
 .app {
   width: 100vw;
   min-height: 100vh;
-  background-color: #EDEDED;
+  background-color: var(--stone);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -9,5 +9,49 @@
 .case-study-app {
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #EDEDED;
+  background-color: var(--stone);
+}
+
+/* Side-by-side hero + work on large screens */
+.above-fold {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  min-height: 100vh;
+  padding-top: 4rem;
+}
+
+.above-fold .hero {
+  padding: var(--section-pad-v) 3rem var(--section-pad-v) 5vw;
+  height: auto;
+}
+
+.above-fold .work {
+  padding: var(--section-pad-v) 5vw var(--section-pad-v) 3rem;
+  border-left: 1px solid rgba(28, 25, 23, 0.1);
+}
+
+.above-fold .hero-scroll {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .above-fold {
+    grid-template-columns: 1fr;
+    min-height: unset;
+    padding-top: 0;
+  }
+
+  .above-fold .hero {
+    padding: 4rem 5vw var(--section-pad-v);
+    height: auto;
+  }
+
+  .above-fold .work {
+    padding: 0 5vw var(--section-pad-v);
+    border-left: none;
+  }
+
+  .above-fold .hero-scroll {
+    display: block;
+  }
 }

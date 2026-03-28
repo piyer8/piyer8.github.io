@@ -1,0 +1,103 @@
+.story-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Flip: image left, text right */
+.story-section--flip {
+  direction: rtl;
+}
+.story-section--flip > * {
+  direction: ltr;
+}
+
+/* Text column */
+.story-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 3rem 5rem 5vw;
+}
+
+.story-label {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.story-heading {
+  font-family: "futura-pt", sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.story-section--hero .story-heading {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.story-body {
+  font-family: "futura-pt", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 38rem;
+}
+
+/* Text-only: single column, centered, narrower max-width */
+.story-section--text-only {
+  grid-template-columns: 1fr;
+}
+
+.story-section--text-only .story-text {
+  max-width: 48rem;
+  padding: 5rem 5vw;
+  justify-self: center;
+}
+
+/* Image column */
+.story-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image img {
+  object-fit: cover;
+  display: block;
+  max-width: 95%;
+  max-height: 90%;
+}
+
+/* Mobile: stack text above image, free height */
+@media (max-width: 768px) {
+  .story-section {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .story-text {
+    padding: 5rem 5vw 2.5rem;
+  }
+
+  .story-image {
+    height: 55vw;
+    min-height: 220px;
+  }
+
+  /* On mobile flip doesn't apply — let DOM order take over */
+  .story-section--flip {
+    direction: ltr;
+  }
+}

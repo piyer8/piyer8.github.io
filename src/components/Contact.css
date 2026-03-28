@@ -1,0 +1,64 @@
+.contact {
+  padding: var(--section-pad-v) 5vw;
+  background-color: var(--ink);
+}
+
+.contact-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-heading {
+  font-family: "futura-pt", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--stone);
+}
+
+.contact-email {
+  font-family: "futura-pt", sans-serif;
+  font-size: clamp(1.375rem, 2.5vw, 2.5rem);
+  font-weight: 400;
+  color: var(--stone);
+  text-decoration: none;
+  width: fit-content;
+  transition: color 300ms var(--ease);
+}
+
+.contact-email:hover {
+  color: var(--red);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-social {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 300ms var(--ease);
+}
+
+.contact-social:hover {
+  opacity: 1;
+}
+
+.contact-copyright {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-top: 2rem;
+}

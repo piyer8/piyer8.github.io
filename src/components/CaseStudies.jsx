@@ -1,61 +1,65 @@
 import { Link } from 'react-router-dom';
-import CaseStudyCard from './CaseStudyCard';
 import './CaseStudies.css';
 
+const works = [
+  {
+    index: '01',
+    title: 'Banfield Pet Hospital',
+    subtitle: 'Wellness Plan Onboarding',
+    tags: 'UX Design, Product, Healthcare',
+    image: '/Banfield/thumbnail.png',
+    path: '/case-study/banfield',
+  },
+  {
+    index: '02',
+    title: 'Mayo Clinic',
+    subtitle: 'Symptom Tracker',
+    tags: 'UX Design, Data Visualisation, Healthcare',
+    image: '/Mayo/Mayo-thumbnail.png',
+    path: '/case-study/mayo-clinic',
+  },
+  {
+    index: '03',
+    title: 'HapViz',
+    subtitle: 'Haptic Captioning',
+    tags: 'Interaction Design, Visualisation',
+    image: '/HapViz/Header.png',
+    path: '/case-study/hapviz',
+  },
+  {
+    index: '04',
+    title: 'Fittrack',
+    subtitle: 'Fitness App',
+    tags: 'Mobile UX, Product Design',
+    image: '/Fittrack/thumbnail.png',
+    path: '/case-study/fittrack',
+  },
+];
+
 function CaseStudies() {
-
-  const caseStudies = [
-    {
-      id: 1,
-      title: 'Mayo Clinic',
-      description: 'Helping Cancer patients report and track their symptoms',
-      image: '/Mayo/Mayo-thumbnail.png',
-      path: '/case-study/mayo-clinic'
-    },
-    {
-      id: 2,
-      title: 'HapViz',
-      description: 'Tracking device usage to better manage your time',
-      image: '/HapViz/Header.png',
-      path: '/case-study/hapviz'
-    },
-    {
-      id: 3,
-      title: 'Fittrack',
-      description: 'Tracking progress to improve fittness motivation',
-      image: '/Fittrack/thumbnail.png',
-      path: '/case-study/fittrack'
-    }
-  ];
-
   return (
-    <div className="case-studies">
-      <div className="case-studies-content">
-        <h1 className="case-studies-title">Case Studies</h1>
-        <div className="case-studies-container">
-        {caseStudies.map((study) => (
-          study.path ? (
-            <Link key={study.id} to={study.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <CaseStudyCard
-                title={study.title}
-                description={study.description}
-                image={study.image}
-              />
+    <section className="work reveal" id="work">
+      <div className="work-inner">
+        <span className="work-label">Selected work</span>
+        <div className="work-list">
+          {works.map((item) => (
+            <Link key={item.index} to={item.path} className="work-row">
+              <div className="work-thumbnail">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <span className="work-index">{item.index}</span>
+              <div className="work-title-group">
+                <span className="work-title">{item.title}</span>
+                <span className="work-subtitle">{item.subtitle}</span>
+              </div>
+              <span className="work-tags">{item.tags}</span>
+              <span className="work-arrow">→</span>
             </Link>
-          ) : (
-            <CaseStudyCard
-              key={study.id}
-              title={study.title}
-              description={study.description}
-              image={study.image}
-            />
-          )
-        ))}
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
 export default CaseStudies;
-

@@ -5,14 +5,22 @@
 }
 
 :root {
+  --stone: #E8E4DC;
+  --ink: #1C1917;
+  --red: #D94F3D;
+  --chalk: #F5F2EC;
+  --dust: #6B6457;
+
+  --section-pad-v: 7.5rem;
+  --max-width: 1440px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
   font-family: "futura-pt", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light;
-  color: #454545;
-  background-color: #EDEDED;
-
+  color: var(--ink);
+  background-color: var(--stone);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +31,7 @@ body {
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #EDEDED;
+  background-color: var(--stone);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -31,15 +39,22 @@ body {
 #root {
   width: 100vw;
   min-height: 100vh;
-  background-color: #EDEDED;
-  animation: fadeIn 0.8s ease-in;
+  background-color: var(--stone);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms var(--ease), transform 600ms var(--ease);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad-v: 4rem;
   }
 }
