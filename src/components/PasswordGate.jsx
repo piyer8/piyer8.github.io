@@ -14,6 +14,9 @@ function PasswordGate({ children }) {
     e.preventDefault();
     if (value === PASSWORD) {
       sessionStorage.setItem('pg_unlocked', 'true');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'password_unlock', { event_category: 'engagement' });
+      }
       setUnlocked(true);
     } else {
       setError(true);

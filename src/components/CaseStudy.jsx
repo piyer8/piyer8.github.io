@@ -1,8 +1,18 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import './CaseStudy.css';
 
 function CaseStudy({ title, description, overview, thumbnail, content, slides = [], nextProject }) {
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'view_case_study', {
+        event_category: 'engagement',
+        event_label: title,
+      });
+    }
+  }, [title]);
+
   return (
     <div className="cs">
       <Header />
