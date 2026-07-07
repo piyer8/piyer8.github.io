@@ -2,9 +2,11 @@ import './Contact.css';
 
 function Contact() {
   return (
-    <section className="contact reveal" id="contact">
-      <div className="contact-inner">
-        <h2 className="contact-heading">Want to work together?</h2>
+    <section className="contact section-reveal" id="contact">
+      <h2 className="contact-heading fade-item">CONTACT</h2>
+      <hr className="contact-rule fade-item" />
+      <div className="contact-body fade-item">
+        <p className="contact-prompt">Want to work together?</p>
         <a href="mailto:ipranav7@gmail.com" className="contact-email">
           ipranav7@gmail.com
         </a>
