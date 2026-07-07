@@ -1,0 +1,73 @@
+.sidenav {
+  width: 176px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 12px;
+  height: calc(100vh - 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidenav-item {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: 72px;
+  transition: flex 350ms var(--ease), height 350ms var(--ease);
+  text-align: left;
+}
+
+.sidenav-item--active {
+  flex: 1;
+  height: auto;
+}
+
+.sidenav-item--white {
+  background: var(--white);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  color: var(--black);
+}
+
+.sidenav-item--orange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.sidenav-item--purple {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.sidenav-item--black {
+  background: var(--black);
+  color: var(--white);
+}
+
+.sidenav-num {
+  display: block;
+  font-family: "futura-pt", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.sidenav-label {
+  display: block;
+  font-family: "futura-pt", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+}

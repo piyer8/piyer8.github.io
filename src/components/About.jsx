@@ -1,30 +1,22 @@
 import './About.css';
 
-const capabilities = [
-  'UX Research',
-  'Interaction Design',
-  'Data Visualisation',
-  'Figma · Framer',
-  'React · D3.js',
-];
-
 function About() {
   return (
-    <section className="about reveal" id="about">
-      <div className="about-inner">
-        <span className="about-label">About</span>
-        <div className="about-grid">
+    <section className="about section-reveal" id="about">
+      <h2 className="about-heading fade-item">ABOUT ME</h2>
+      <hr className="about-rule fade-item" />
+      <div className="about-grid fade-item">
+        <div className="about-text">
           <p className="about-bio">
-            I'm a designer and visualization developer based in Chicago. I work at the intersection of data, interaction, and clarity — turning complex systems into experiences people actually want to use.
+            I am a product designer, currently based in{' '}
+            <span className="about-accent">Chicago, IL</span>
           </p>
-          <ul className="capabilities-list">
-            {capabilities.map((item) => (
-              <li key={item} className="capability-item">
-                <span className="capability-dash">—</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <p className="about-bio">
+            Outside of work you can find me playing soccer, or headbanging at the nearest metal concert
+          </p>
+        </div>
+        <div className="about-photo-wrap">
+          <img src="/pranav.png" alt="Pranav Iyer" className="about-photo" />
         </div>
       </div>
     </section>

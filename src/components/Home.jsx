@@ -3,15 +3,15 @@ import './Home.css';
 function Home() {
   return (
     <section className="hero" id="home">
-      <div className="hero-inner">
-        <span className="hero-eyebrow">UX · Design · Visualization</span>
-        <h1 className="hero-name">
-          Pranav<br />
-          Iyer<span className="hero-dot">.</span>
-        </h1>
-        <p className="hero-sub">Designer &amp; visualization developer — Chicago, IL</p>
+      <div className="hero-body">
+        <p className="hero-hello">Hello, I am</p>
+        <h1 className="hero-name">PRANAV<br />IYER</h1>
       </div>
-      <span className="hero-scroll">Scroll ↓</span>
+      <div className="hero-bar">
+        <span className="hero-arrow">↓</span>
+        <span>A designer who advocates for your customers — taking products from concept to deployment</span>
+        <span className="hero-arrow">↓</span>
+      </div>
     </section>
   );
 }

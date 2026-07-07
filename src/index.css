@@ -5,22 +5,28 @@
 }
 
 :root {
+  --white: #ffffff;
+  --black: #000000;
+  --orange: #FF3300;
+  --purple: #7000FF;
+  --gray: #4a4a4a;
+  --light-gray: #f2f2f2;
+
+  /* legacy tokens kept for case study pages */
   --stone: #E8E4DC;
   --ink: #1C1917;
-  --red: #D94F3D;
+  --red: #FF3300;
   --chalk: #F5F2EC;
   --dust: #6B6457;
 
-  --section-pad-v: 7.5rem;
-  --max-width: 1440px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   font-family: "futura-pt", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
-  color: var(--ink);
-  background-color: var(--stone);
+  color: var(--black);
+  background-color: var(--white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +37,7 @@ body {
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: var(--stone);
+  background-color: var(--white);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -39,7 +45,7 @@ body {
 #root {
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--stone);
+  background-color: var(--white);
 }
 
 .reveal {
@@ -53,8 +59,20 @@ body {
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-  :root {
-    --section-pad-v: 4rem;
-  }
+/* Section stagger system */
+.fade-item {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+}
+
+.in-view .fade-item:nth-child(1) { transition-delay: 0.05s; }
+.in-view .fade-item:nth-child(2) { transition-delay: 0.2s;  }
+.in-view .fade-item:nth-child(3) { transition-delay: 0.35s; }
+.in-view .fade-item:nth-child(4) { transition-delay: 0.5s;  }
+.in-view .fade-item:nth-child(5) { transition-delay: 0.65s; }
+
+.in-view .fade-item {
+  opacity: 1;
+  transform: translateY(0);
 }

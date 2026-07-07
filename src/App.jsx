@@ -1,42 +1,46 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import Approach from './components/Approach';
 import CaseStudies from './components/CaseStudies';
 import About from './components/About';
 import Contact from './components/Contact';
+import SideNav from './components/SideNav';
 import MayoClinicCaseStudy from './components/MayoClinicCaseStudy';
 import HapVizCaseStudy from './components/HapVizCaseStudy';
-import FittrackCaseStudy from './components/FittrackCaseStudy';
+import IREAPCaseStudy from './components/IREAPCaseStudy';
 import BanfieldCaseStudy from './components/BanfieldCaseStudy';
 import './App.css';
-import Header from './components/Header';
 
 function AppContent() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
+    const revealObs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
       { threshold: 0.1 }
     );
+    document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const sectionObs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in-view'); }),
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.section-reveal').forEach((el) => sectionObs.observe(el));
+
+    return () => { revealObs.disconnect(); sectionObs.disconnect(); };
   }, []);
 
   return (
     <div className="app">
-      <Header />
-      <div className="above-fold">
-        <Home />
-        <CaseStudies />
+      <div className="layout">
+        <SideNav />
+        <main className="main-content">
+          <Home />
+          <Approach />
+          <CaseStudies />
+          <About />
+          <Contact />
+        </main>
       </div>
-      <About />
-      <Contact />
     </div>
   );
 }
@@ -55,9 +59,9 @@ function App() {
           <HapVizCaseStudy />
         </div>
       } />
-      <Route path="/case-study/fittrack" element={
+      <Route path="/case-study/ireap" element={
         <div className="app case-study-app">
-          <FittrackCaseStudy />
+          <IREAPCaseStudy />
         </div>
       } />
       <Route path="/case-study/banfield" element={
