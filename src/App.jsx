@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Approach from './components/Approach';
 import CaseStudies from './components/CaseStudies';
@@ -12,7 +12,31 @@ import IREAPCaseStudy from './components/IREAPCaseStudy';
 import BanfieldCaseStudy from './components/BanfieldCaseStudy';
 import './App.css';
 
-function AppContent() {
+function HomeContent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const id = location.state?.scrollTo;
+    if (!id) return;
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }, [location.state]);
+
+  return (
+    <>
+      <Home />
+      <Approach />
+      <CaseStudies />
+      <About />
+      <Contact />
+    </>
+  );
+}
+
+function App() {
+  const location = useLocation();
+
   useEffect(() => {
     const revealObs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
@@ -27,49 +51,23 @@ function AppContent() {
     document.querySelectorAll('.section-reveal').forEach((el) => sectionObs.observe(el));
 
     return () => { revealObs.disconnect(); sectionObs.disconnect(); };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="app">
       <div className="layout">
         <SideNav />
         <main className="main-content">
-          <Home />
-          <Approach />
-          <CaseStudies />
-          <About />
-          <Contact />
+          <Routes>
+            <Route path="/" element={<HomeContent />} />
+            <Route path="/case-study/mayo-clinic" element={<MayoClinicCaseStudy />} />
+            <Route path="/case-study/hapviz" element={<HapVizCaseStudy />} />
+            <Route path="/case-study/ireap" element={<IREAPCaseStudy />} />
+            <Route path="/case-study/banfield" element={<BanfieldCaseStudy />} />
+          </Routes>
         </main>
       </div>
     </div>
-  );
-}
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<AppContent />} />
-      <Route path="/case-study/mayo-clinic" element={
-        <div className="app case-study-app">
-          <MayoClinicCaseStudy />
-        </div>
-      } />
-      <Route path="/case-study/hapviz" element={
-        <div className="app case-study-app">
-          <HapVizCaseStudy />
-        </div>
-      } />
-      <Route path="/case-study/ireap" element={
-        <div className="app case-study-app">
-          <IREAPCaseStudy />
-        </div>
-      } />
-      <Route path="/case-study/banfield" element={
-        <div className="app case-study-app">
-          <BanfieldCaseStudy />
-        </div>
-      } />
-    </Routes>
   );
 }
 

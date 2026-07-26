@@ -4,12 +4,6 @@
   background-color: var(--white);
 }
 
-.case-study-app {
-  background-color: var(--stone);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 /* New two-column layout */
 .layout {
   display: flex;

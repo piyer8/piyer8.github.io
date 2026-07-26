@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import './ScrollStory.css';
 
 function ScrollStory({ children, nextProject }) {
@@ -27,7 +26,6 @@ function ScrollStory({ children, nextProject }) {
 
   return (
     <div className="scroll-story" ref={containerRef}>
-      <Header />
       {children}
       <div className="story-nav">
         {nextProject && (

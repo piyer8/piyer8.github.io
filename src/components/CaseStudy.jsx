@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import './CaseStudy.css';
 
 function CaseStudy({ title, description, overview, thumbnail, content, slides = [], nextProject }) {
@@ -15,7 +14,6 @@ function CaseStudy({ title, description, overview, thumbnail, content, slides = 
 
   return (
     <div className="cs">
-      <Header />
       <div className="cs-body">
 
         {/* Hero */}

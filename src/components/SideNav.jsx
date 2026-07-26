@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './SideNav.css';
 
 const sections = [
@@ -10,9 +11,17 @@ const sections = [
 ];
 
 function SideNav() {
-  const [active, setActive] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isCaseStudy = location.pathname.startsWith('/case-study');
+  const [active, setActive] = useState(isCaseStudy ? 'work' : 'home');
 
   useEffect(() => {
+    if (isCaseStudy) {
+      setActive('work');
+      return;
+    }
+
     const els = sections
       .map(({ id }) => document.getElementById(id))
       .filter(Boolean);
@@ -28,10 +37,15 @@ function SideNav() {
 
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
-  }, []);
+  }, [isCaseStudy, location.pathname]);
 
-  const scrollTo = (id) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const goTo = (id) => {
+    if (isCaseStudy) {
+      navigate('/', { state: { scrollTo: id } });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="sidenav">
@@ -39,7 +53,7 @@ function SideNav() {
         <button
           key={id}
           className={`sidenav-item sidenav-item--${color}${active === id ? ' sidenav-item--active' : ''}`}
-          onClick={() => scrollTo(id)}
+          onClick={() => goTo(id)}
         >
           <span className="sidenav-num">{num}</span>
           <span className="sidenav-label">{label}</span>
