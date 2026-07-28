@@ -17,7 +17,7 @@ function HapVizCaseStudy() {
         heading="256 haptic signals, 7,680 human descriptions"
         body="Over the past year I collected 30 free-text descriptions per signal from participants — capturing how people perceive vibrotactile feedback across sensory, emotional, and associative dimensions. The result is one of the largest labelled haptic perception datasets of its kind."
         image="/HapViz/Slide 1.png"
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
       <StorySection
         label="02 — Process"
@@ -31,7 +31,7 @@ function HapVizCaseStudy() {
         heading="Three views for exploring haptic perception"
         body="The React + D3.js interface offers a Gallery view for filtering signals by sensation or emotion, a Keyword exploration view with interactive scatter plots, and a Signal details view showing emotional scores and category breakdowns — all designed to help practitioners find the right signal faster."
         image="/HapViz/Slide 3.png"
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
     </ScrollStory>
   );

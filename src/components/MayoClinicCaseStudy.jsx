@@ -19,7 +19,7 @@ function MayoClinicCaseStudy() {
         heading="Reporting fatigue makes accurate data impossible"
         body="PRO-CTCAE's length and rigid format make symptom reporting difficult for cancer patients experiencing cognitive strain. Symptoms are chronically underreported or forgotten between clinical visits."
         image="/Mayo/CTCAE.webp"
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
       <StorySection
         label="02 — Research"
@@ -33,21 +33,21 @@ function MayoClinicCaseStudy() {
         heading="In-clinic tablet app"
         body={proto_text}
         image="/Mayo/mayo_img3.png"
-        bg="var(--stone)"
+        bg="var(--white)"
       />
       <StorySection
         label="03 — Prototyping"
         heading="Adaptive flow logic"
         body="The app uses AI to adaptively adjust the flow of questions depending on the symptoms experienced by the patient."
         image="/Mayo/mayo_img4.png"
-        bg="var(--chalk)"
+        bg="var(--stone)"
       />
       <StorySection
         label="04 — Companion App"
         heading="Reporting symptoms between sessions"
         body="The mobile app allows patients to report symptoms between sessions via a chatbot. They can indicate affected areas using a body diagram, upload photos, or describe their symptoms in text. If needed, they can also fill out the PRO-CTCAE or connect directly with their physician through the app."
         image="/Mayo/mayo_img5.png"
-        bg="var(--stone)"
+        bg="var(--white)"
       />
       <StorySection
         label="05 — Visual Design"
@@ -59,7 +59,7 @@ function MayoClinicCaseStudy() {
       <StorySection
         heading="Conclusion"
         body="Designing for a clinical environment taught me that good UX rarely lives in the interface alone. Embedding myself alongside Mayo Clinic physicians surfaced a web of competing priorities:patient anxiety, clinician workflow, EHR constraints that outside research could never have fully captured. The most consequential design decisions weren't about color or layout; they were about trust, timing, and understanding what it means to feel unwell while being asked to describe how unwell you feel. This project cemented my belief that healthcare design demands genuine systems thinking, and that the best outcomes come from building with stakeholders and not just for them."
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
     </ScrollStory>
   );

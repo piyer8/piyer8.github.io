@@ -17,7 +17,7 @@ function BanfieldCaseStudy() {
         heading="A $700M drop-off problem"
         body="Banfield onboards new customers through a multi-step web funnel: enter pet details, locate the nearest hospital, select a plan. The flow had too many steps, too many decisions, and not enough clarity about what users were actually getting. The drop-off was a symptom. The diagnosis was cognitive overload."
         image="/Banfield/bf_img1.png"
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
       <StorySection
         label="02 — Goals"
@@ -31,7 +31,7 @@ function BanfieldCaseStudy() {
         heading="Testing as a reality check, not a final step"
         body="The redesign was iterative — stakeholder reviews, design critiques, and user testing running in parallel rather than in sequence. Testing wasn't a final checkpoint; it was how we stayed honest. Users told us exactly where the flow broke down, which saved us from shipping confident assumptions."
         image="/Banfield/bf_img3.png"
-        bg="var(--chalk)"
+        bg="var(--white)"
       />
       <StorySection
         label="04 — Redesign"
@@ -43,7 +43,7 @@ function BanfieldCaseStudy() {
       <StorySection
         heading="Conclusion"
         body="Drop-off fell from 40% to 26% — a 14-point reduction. User satisfaction scores improved. The number that matters most: significantly more people are completing the funnel and becoming Banfield customers. The project reinforced something worth stating plainly — user testing isn't a nice-to-have. It's the mechanism that turns design intuition into design evidence. The Banfield project was a reminder that the most valuable design work is often invisible — removing steps, collapsing decisions, clarifying what users are actually looking at. A 14-point drop in abandonment doesn't come from a visual refresh. It comes from understanding why people leave, and having the conviction to fix it structurally rather than cosmetically."
-        bg="var(--stone)"
+        bg="var(--white)"
       />
     </ScrollStory>
   );
