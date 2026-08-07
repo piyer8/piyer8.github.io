@@ -1,5 +1,5 @@
 .app {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: var(--white);
 }
@@ -15,7 +15,13 @@
 .main-content {
   flex: 1;
   min-width: 0;
-  border: 1.5px solid rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: pageFadeIn 350ms ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

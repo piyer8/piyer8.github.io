@@ -1,8 +1,9 @@
+import Section from './Section';
 import './Approach.css';
 
 function Approach() {
   return (
-    <section className="approach section-reveal" id="approach">
+    <Section className="approach section-reveal" id="approach">
       <h2 className="approach-heading fade-item">MY APPROACH</h2>
       <hr className="approach-rule fade-item" />
       <p className="approach-body approach-body--secondary fade-item">
@@ -14,7 +15,7 @@ function Approach() {
         decisions are grounded in real constraints, not assumptions. The best outcomes happen when
         design stays in the room the whole time.
       </p>
-    </section>
+    </Section>
   );
 }
 

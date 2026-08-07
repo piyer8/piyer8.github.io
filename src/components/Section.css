@@ -1,0 +1,14 @@
+.section {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  scroll-snap-align: start;
+}
+
+.section--dark {
+  background: var(--black);
+}

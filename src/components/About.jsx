@@ -1,8 +1,9 @@
+import Section from './Section';
 import './About.css';
 
 function About() {
   return (
-    <section className="about section-reveal" id="about">
+    <Section className="about section-reveal" id="about">
       <h2 className="about-heading fade-item">ABOUT ME</h2>
       <hr className="about-rule fade-item" />
       <div className="about-grid fade-item">
@@ -19,7 +20,7 @@ function About() {
           <img src="/pranav.png" alt="Pranav Iyer" className="about-photo" />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

@@ -1,4 +1,5 @@
 import WorkCard from './WorkCard';
+import Section from './Section';
 import './CaseStudies.css';
 
 const works = [
@@ -38,7 +39,7 @@ const works = [
 
 function CaseStudies() {
   return (
-    <section className="work section-reveal" id="work">
+    <Section className="work section-reveal" id="work">
       <h2 className="work-heading fade-item">SELECTED WORK</h2>
       <hr className="work-rule fade-item" />
       <div className="work-grid fade-item">
@@ -46,8 +47,9 @@ function CaseStudies() {
           <WorkCard key={item.title} {...item} />
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
 export default CaseStudies;
+

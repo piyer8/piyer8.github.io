@@ -1,8 +1,9 @@
+import Section from './Section';
 import './Contact.css';
 
 function Contact() {
   return (
-    <section className="contact section-reveal" id="contact">
+    <Section dark className="contact section-reveal" id="contact">
       <h2 className="contact-heading fade-item">CONTACT</h2>
       <hr className="contact-rule fade-item" />
       <div className="contact-body fade-item">
@@ -30,7 +31,7 @@ function Contact() {
         </div>
         <p className="contact-copyright">© 2026 Pranav Iyer</p>
       </div>
-    </section>
+    </Section>
   );
 }
 

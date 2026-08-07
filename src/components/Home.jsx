@@ -1,8 +1,9 @@
+import Section from './Section';
 import './Home.css';
 
 function Home() {
   return (
-    <section className="hero" id="home">
+    <Section className="hero" id="home">
       <div className="hero-body">
         <p className="hero-hello">Hello, I am</p>
         <h1 className="hero-name">PRANAV<br />IYER</h1>
@@ -33,7 +34,7 @@ function Home() {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

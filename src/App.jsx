@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Approach from './components/Approach';
@@ -37,6 +37,12 @@ function HomeContent() {
 function App() {
   const location = useLocation();
 
+  useLayoutEffect(() => {
+    if (!location.state?.scrollTo) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+
   useEffect(() => {
     const revealObs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }),
@@ -57,7 +63,7 @@ function App() {
     <div className="app">
       <div className="layout">
         <SideNav />
-        <main className="main-content">
+        <main className="main-content" key={location.pathname}>
           <Routes>
             <Route path="/" element={<HomeContent />} />
             <Route path="/case-study/mayo-clinic" element={<MayoClinicCaseStudy />} />

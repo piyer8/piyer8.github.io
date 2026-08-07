@@ -1,15 +1,11 @@
 .about {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding: 3rem 3.5rem;
-  background: var(--white);
 }
 
 .about-heading {
   font-family: "futura-pt", sans-serif;
   font-weight: 700;
-  font-size: clamp(3.5rem, 9vw, 10rem);
+  font-size: clamp(2.5rem, 11.1vw, 10rem);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--black);
@@ -40,7 +36,7 @@
 .about-bio {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.25rem, 2.2vw, 2.25rem);
+  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
   line-height: 1.3;
   color: var(--gray);
 }
@@ -64,7 +60,7 @@
 }
 
 @media (max-width: 768px) {
-  .about-heading { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .about-heading { font-size: clamp(2rem, 12vw, 3.5rem); }
   .about-bio     { font-size: clamp(1rem, 4vw, 1.5rem); }
   .about-grid    { grid-template-columns: 1fr; }
 }

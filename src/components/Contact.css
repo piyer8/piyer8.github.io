@@ -1,15 +1,11 @@
 .contact {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding: 3rem 3.5rem;
-  background: var(--black);
 }
 
 .contact-heading {
   font-family: "futura-pt", sans-serif;
   font-weight: 700;
-  font-size: clamp(3.5rem, 9vw, 10rem);
+  font-size: clamp(2.5rem, 11.1vw, 10rem);
   line-height: 1;
   letter-spacing: -0.02em;
   color: var(--white);
@@ -33,14 +29,14 @@
 .contact-prompt {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 2.22vw, 2rem);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-email {
   font-family: "futura-pt", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  font-size: clamp(1.5rem, 3.33vw, 3rem);
   color: var(--white);
   text-decoration: none;
   transition: color 250ms var(--ease);
@@ -71,7 +67,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact-heading { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .contact-heading { font-size: clamp(2rem, 12vw, 3.5rem); }
   .contact-email   { font-size: clamp(1.1rem, 5vw, 2rem); }
 }
 
