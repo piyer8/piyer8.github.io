@@ -159,6 +159,10 @@
   font-weight: 700;
 }
 
+.banfield-card-heading--white {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* Problem */
 .banfield-problem-full {
   display: flex;
@@ -259,11 +263,56 @@
   display: block;
 }
 
+.banfield-process-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* Conclusion */
 .banfield-conclusion {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.banfield-stats {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banfield-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 160px;
+  height: 72px;
+  padding: 12px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.banfield-stat-num {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--orange);
+}
+
+.banfield-stat-label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 /* Footer nav */
@@ -312,6 +361,8 @@
   .banfield-changes { flex-direction: column; }
   .banfield-process { flex-direction: column; gap: 24px; }
   .banfield-process-img { flex: auto; max-width: 100%; width: 100%; }
+  .banfield-stats { gap: 10px; }
+  .banfield-stat { width: 140px; }
   .banfield-footer-nav { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .banfield-card { padding: 20px; }
 }

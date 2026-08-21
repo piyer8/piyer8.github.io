@@ -89,28 +89,35 @@ function BanfieldCaseStudy() {
         {/* Process */}
         <div className="banfield-card banfield-card--orange banfield-process reveal">
           <img src="/Banfield/bf_img3.png" alt="Process screens" className="banfield-process-img" />
-          <p className="banfield-card-body banfield-card-body--white">
-            The redesign didn't move in a straight line. Stakeholder reviews, design critiques, and user testing all
-            happened at the same time, feeding into each other instead of waiting their turn. Testing wasn't something
-            we saved for the end to rubber-stamp our decisions; it's what kept us honest along the way. Users pointed
-            out exactly where the flow fell apart, which kept us from shipping stuff based on assumptions we just felt
-            confident about.
-          </p>
+          <div className="banfield-process-text">
+            <h2 className="banfield-card-heading banfield-card-heading--white">Iterative design</h2>
+            <p className="banfield-card-body banfield-card-body--white">
+              The redesign didn't move in a straight line. Stakeholder reviews, design critiques, and user testing all
+              happened at the same time, feeding into each other instead of waiting their turn. Testing wasn't something
+              we saved for the end to rubber-stamp our decisions; it's what kept us honest along the way. Users pointed
+              out exactly where the flow fell apart, which kept us from shipping stuff based on assumptions we just felt
+              confident about.
+            </p>
+          </div>
         </div>
 
-        {/* Conclusion */}
+        {/* Findings & Conclusion */}
         <div className="banfield-card banfield-card--white banfield-conclusion reveal">
-          <h2 className="banfield-card-heading">Conclusion</h2>
+          <h2 className="banfield-card-heading">Findings &amp; Conclusion</h2>
+          <div className="banfield-stats">
+            <div className="banfield-stat">
+              <span className="banfield-stat-num">4%</span>
+              <span className="banfield-stat-label">Increase in conversion</span>
+            </div>
+            <div className="banfield-stat">
+              <span className="banfield-stat-num">14%</span>
+              <span className="banfield-stat-label">Improvement in package selection</span>
+            </div>
+          </div>
           <p className="banfield-card-body">
-            Drop-off fell from 40% to 26%. That's 14 points of people who used to bail and now don't. Satisfaction
-            scores went up too, but honestly the number that matters is simpler than that: way more people are
-            finishing the funnel and actually becoming Banfield customers.
-          </p>
-          <p className="banfield-card-body">
-            If this project taught me anything, it's that user testing isn't optional. It's the thing that turns a
-            hunch into proof you can act on. And most of the design work that actually mattered here is stuff no one
-            will ever notice: a step removed here, a decision collapsed there, making it dead obvious what someone's
-            supposed to be looking at.
+            This project made clear to me the value of analytics and data. Being able to pinpoint the exact point
+            where users dropped off helped us be more targeted about our user testing. Qualitative and quantitative
+            data combined allowed us to improve Banfield's digital strategy.
           </p>
         </div>
 

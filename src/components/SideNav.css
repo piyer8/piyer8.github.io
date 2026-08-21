@@ -19,34 +19,52 @@
   justify-content: space-between;
   flex-shrink: 0;
   height: 72px;
-  transition: flex 350ms var(--ease), height 350ms var(--ease);
+  transition: flex 350ms var(--ease), height 350ms var(--ease), box-shadow 250ms var(--ease);
   text-align: left;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .sidenav-item--active {
   flex: 1;
   height: auto;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .sidenav-item--white {
   background: var(--white);
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   color: var(--black);
 }
 
 .sidenav-item--orange {
-  background: var(--orange);
+  background: #D9784F;
   color: var(--white);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .sidenav-item--purple {
-  background: var(--purple);
+  background: #6C56A6;
   color: var(--white);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .sidenav-item--black {
-  background: var(--black);
+  background: #2B2B2B;
   color: var(--white);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.sidenav-item--orange.sidenav-item--active {
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.sidenav-item--purple.sidenav-item--active {
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.sidenav-item--black.sidenav-item--active {
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 .sidenav-num {
